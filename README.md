@@ -1,10 +1,10 @@
-# Progressive web-app task for chormium browser 
+# Progressive web-app and chrome Extension task for chromium browser 
 
 This is a progressive web-app with three pages initially - 
 * System Data
 * System diagnostic manager
 * System state
-
+Two are interacting with each other. Extension is providing all the necessary Cpu Information for the web-app to render after every 30 second.
 
 ## Available Scripts
 
