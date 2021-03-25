@@ -1,5 +1,6 @@
 .navbar {
-  background-color: #7c88ac;
+  background-color: #3f538d;
+  justify-content: space-between;
 }
 
 .navbar h3 {
@@ -13,11 +14,15 @@
 .navbar a {
   display: inline-block;
   padding: 10px;
-  color: #fff;
+  color: rgb(255, 255, 255);
   text-decoration: none;
+  
 }
 
 .page-info {
   padding: 10px;
+}
+.app__right {
+  flex: 0.9;
 }
 
