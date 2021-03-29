@@ -1,13 +1,36 @@
+
 var editorExtensionId = "nfmajjgjfffegnplelahdemjendkgmpb";
+
+ var user = []; 
+ var idle = [];
+ var kernel = [];
+ for (let index = 0; index < 20; index++) {
+  user.push({y:0, "label": "Processor" + index});
+  idle.push({y: 0, "label": "Processor" + index});
+  kernel.push({y: 0, "label": "Processor" + index});
+  
+}
 function repeatingFunction() {
+  
+  if(window.location.href == "http://localhost:3000/"){
   chrome.runtime.sendMessage(
     editorExtensionId,
     { toFind: "cpuInfo" },
     function (cpuInfo) {
+      user.length = cpuInfo.processors.length;
+      idle.length = cpuInfo.processors.length;
+      kernel.length = cpuInfo.processors.length;
+      console.log(user.length);
       document.getElementById("archname").textContent = cpuInfo.archName;
       var features = cpuInfo.features;
       var s = "";
-      console.log(cpuInfo.processors[0]);
+      for (let index = 0; index < cpuInfo.processors.length; index++) {
+        
+        user[index].y = cpuInfo.processors[index].usage.user;   
+  idle[index].y = cpuInfo.processors[index].usage.idle;
+  kernel[index].y = cpuInfo.processors[index].usage.kernel;
+        
+      }
       function match() {
         for (let index = 0; index < features.length; index++) {
           s = s + features[index] + " ";
@@ -17,8 +40,7 @@ function repeatingFunction() {
       document.getElementById("features").textContent = match();
 
       document.getElementById("modelName").textContent = cpuInfo.modelName;
-      document.getElementById("numOfProcessor").textContent =
-        cpuInfo.numOfProcessors;
+      
     }
   );
   chrome.runtime.sendMessage(
@@ -54,10 +76,12 @@ function repeatingFunction() {
       document.getElementById("width").textContent =
         Display[0].bounds.width + " pixels";
     }
-  );
+  );}
 }
 
 repeatingFunction();
 setInterval(function () {
   repeatingFunction();
+
 }, 30000);
+

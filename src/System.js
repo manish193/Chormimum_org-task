@@ -29,12 +29,7 @@ const System = () => {
                     <span id="modelName"></span>
                   </td>
                 </tr>
-                <tr>
-                  <td>Number of Processors</td>
-                  <td>
-                    <span id="numOfProcessor"></span>
-                  </td>
-                </tr>
+                
               </tbody>
             </table>
           </div>
@@ -66,7 +61,7 @@ const System = () => {
       </div>
 
       <div className="col s7 m3">
-        <div className="card blue-grey darken-1">
+        <div className="card blue-grey darken-1 small" >
           <div className="card-content white-text">
             <span className="card-title">Storage</span>
             <table>

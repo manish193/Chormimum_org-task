@@ -2,7 +2,6 @@
     color: #000;
     border: 1.5px solid black; 
     padding: 1px;
-    background-color: #ffffff; 
 
     
 }
@@ -10,66 +9,61 @@
     color: #000;
     border: 1.5px solid black; 
     padding: 1px;
-    background-color: #ffffff; 
 }
 #modelName {
     color: #000;
     border: 1.5px solid black; 
     padding: 1px;
-    background-color: #ffffff; 
 }
 #numOfProcessor {
     color: #000;
     border: 1.5px solid black; 
     padding: 1px;
-    background-color: #ffffff; 
 }
 #capacity1 {
     color: #000;
     border: 1.5px solid black; 
     padding: 1px;
-    background-color: #ffffff; 
 }
 #capacity2 {
     color: #000;
     border: 1.5px solid black; 
     padding: 1px;
-    background-color: #ffffff; 
 }
 #capacity3 {
     color: #000;
     border: 1.5px solid black; 
     padding: 1px;
-    background-color: #ffffff; 
 }
 #capacity4 {
     color: #000;
     border: 1.5px solid black; 
     padding: 1px;
-    background-color: #ffffff; 
 }
 #capacity {
     color: #000;
     border: 1.5px solid black; 
     padding: 1px;
-    background-color: #ffffff; }
+}
 #availableCapacity {
     color: #000;
     border: 1.5px solid black; 
     padding: 1px;
-    background-color: #ffffff; }
+}
 #height {
     color: #000;
     border: 1.5px solid black; 
     padding: 1px;
-    background-color: #ffffff; }
+     }
     #width {
         color: #000;
-        border: 1.5px solid black; 
+        font-size: 15px;
+        font-weight:bolder;
+        border: 1.5px solid rgb(255, 255, 255); 
         padding: 1px;
-        background-color: #ffffff;
+        
 }
 tbody tr{
     font-size: 13px;
-    padding-top: 2px;
+    
 }
